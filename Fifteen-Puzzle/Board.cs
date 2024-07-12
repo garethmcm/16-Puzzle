@@ -1,60 +1,84 @@
+using System;
+using System.Collections.Generic;
+
 public class Board
 {
     private Square[,] board;
+    private Boolean winChecker;
 
     public Board()
     {
         board = new Square[4, 4]; // Create a 4x4 board
+        winChecker = false;
         generateBoard();
     }
     
     public void generateBoard()
     {
-        List<int> availableValues = new List<int>();
-        for (int i = 1; i <= 16; i++)
+        Random rand = new Random();
+        List<int> randomList = new List<int>();
+        for (int i = 1; i < 17; i++)
         {
-            availableValues.Add(i);
+            int value;
+            do
+            {
+                value = rand.Next(1, 17);
+            } while (randomList.Contains(value));
+
+            randomList.Add(value);
         }
 
-        Random rand = new Random();
-
+        int listCount = 0;
+        
         for (int row = 0; row < 4; row++)
         {
             for (int col = 0; col < 4; col++)
             {
-                int randomIndex = rand.Next(0, availableValues.Count);
-                int randomValue = availableValues[randomIndex];
-                board[row, col] = new Square(randomValue);
-                availableValues.RemoveAt(randomIndex);
+                int listValue = randomList[listCount];
+                board[row, col] = new Square(listValue);
+                listCount++;
             }
         }
-    }
-    
-    public int GetSquareAllocation(Random rand, int minValue, int maxValue, HashSet<int> excludedNumbers)
-    {
-        int value;
-        do
-        {
-            value = rand.Next(minValue, maxValue);
-        } while (excludedNumbers.Contains(value));
-
-        return value;
     }
 
     public void displayBoard()
     {
-        
+        for (int row = 0; row < 4; row++)
+        {
+            for (int col = 0; col < 4; col++)
+            {
+                Console.Write(board[row, col].ToString().PadLeft(4));
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
     }
 
     public void makeMove()
     {
-        
+        // TODO
     }
 
     public Boolean checkWinner()
     {
-        Boolean winner = false;
-        
-        return winner;
+        Boolean winCheck = false;
+        int checker = 1;
+        for (int row = 0; row < 4; row++)
+        {
+            for (int col = 0; col < 4; col++)
+            {
+                while(board[row, col].GetValue() == checker)
+                {
+                    checker++;
+                }
+            }
+        }
+        if (checker == 17)
+        {
+            winCheck = true;
+            Console.WriteLine("We have a winner!");
+        }
+        Console.WriteLine("Game on.");
+        return winCheck;
     }
 }

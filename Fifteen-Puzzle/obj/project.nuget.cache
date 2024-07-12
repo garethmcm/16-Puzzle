@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WSV2xfLii5SZFrN+sNzadmPZKOrV+JjyhrcUcsWauGzoxRN7zLHfkL5weVVjKpS1ZdLGF0pnn6Y3lFp2ZuOURA==",
+  "dgSpecHash": "JFEFgAbwNAgcDTHG0f8Q5o6c9q/SfcpiSxV+wXLFF3JTWG7Wz8J+xmCyrbLqa6O5/AsyKedjoVyhVf6FXWdELg==",
   "success": true,
-  "projectFilePath": "/Users/gareth/Documents/C#/WebAppTutorial/ConsoleApp1/ConsoleApp1.csproj",
+  "projectFilePath": "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/FifteenPuzzle.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

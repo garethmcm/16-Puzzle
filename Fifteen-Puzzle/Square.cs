@@ -1,11 +1,29 @@
 public class Square
 {
-    private int Value; // Private field
+    private int value;
 
-    // Constructor with a parameter
     public Square(int value)
     {
-        Value = value; // Initialize the private field 'Value' with the parameter 'value'
+        this.value = value;
     }
 
+    public int GetValue()
+    {
+        return value;
+    }
+
+    public void SetValue(int value)
+    {
+        this.value = value;
+    }
+
+    public override string ToString()
+    {
+        if (this.value == 16)
+        {
+            return " ";
+        }
+
+        return value.ToString();
+    }
 }

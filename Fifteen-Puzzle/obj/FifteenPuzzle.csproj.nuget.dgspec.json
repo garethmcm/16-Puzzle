@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/ConsoleApp1.csproj": {}
+    "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/FifteenPuzzle.csproj": {}
   },
   "projects": {
-    "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/ConsoleApp1.csproj": {
+    "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/FifteenPuzzle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/ConsoleApp1.csproj",
-        "projectName": "ConsoleApp1",
-        "projectPath": "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/ConsoleApp1.csproj",
+        "projectUniqueName": "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/FifteenPuzzle.csproj",
+        "projectName": "FifteenPuzzle",
+        "projectPath": "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/FifteenPuzzle.csproj",
         "packagesPath": "/Users/gareth/.nuget/packages/",
         "outputPath": "/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/",
         "projectStyle": "PackageReference",

@@ -1,0 +1,15 @@
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/bin/Debug/net8.0/FifteenPuzzle
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/bin/Debug/net8.0/FifteenPuzzle.deps.json
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/bin/Debug/net8.0/FifteenPuzzle.runtimeconfig.json
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/bin/Debug/net8.0/FifteenPuzzle.dll
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/bin/Debug/net8.0/FifteenPuzzle.pdb
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.AssemblyInfoInputs.cache
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.AssemblyInfo.cs
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.csproj.CoreCompileInputs.cache
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.sourcelink.json
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.dll
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/refint/FifteenPuzzle.dll
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.pdb
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/FifteenPuzzle.genruntimeconfig.cache
+/Users/gareth/Documents/C#/Player's Guide/C24/15-Puzzle/Fifteen-Puzzle/obj/Debug/net8.0/ref/FifteenPuzzle.dll

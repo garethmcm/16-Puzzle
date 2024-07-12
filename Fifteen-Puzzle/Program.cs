@@ -1,6 +1,9 @@
-﻿public void startGame()
+﻿public class Program
 {
-    new Board() board;
-    generateBoard();
-    
+    public static void Main(string[] args)
+    {
+        Board board = new Board();
+        board.displayBoard();
+        board.checkWinner();
+    }
 }
