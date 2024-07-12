@@ -4,6 +4,9 @@
     {
         Board board = new Board();
         board.displayBoard();
-        board.checkWinner();
+        while (!board.checkWinner())
+        {
+            board.makeMove();
+        }
     }
 }

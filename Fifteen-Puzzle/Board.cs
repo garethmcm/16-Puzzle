@@ -56,7 +56,64 @@ public class Board
 
     public void makeMove()
     {
-        // TODO
+        int x = 0, y = 0;
+        
+        while(board[x, y].GetValue() != 16)
+        {
+            y++;
+            if (y >= 4)
+            {
+                y = 0;
+                x++;
+            }
+        }
+                
+        while (!winChecker)
+        {
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+            switch (keyInfo.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    if (x-1 >= 0)
+                    {
+                        int temp = board[x-1, y].GetValue();
+                        board[x-1, y].SetValue(16);
+                        board[x, y].SetValue(temp);
+                    }
+                    break;
+
+                case ConsoleKey.DownArrow:
+                if (x+1 <= 4)
+                {
+                    int temp = board[x+1, y].GetValue();
+                    board[x+1, y].SetValue(16);
+                    board[x, y].SetValue(temp);
+                }
+                break;
+                
+                case ConsoleKey.LeftArrow:
+                    if (y-1 >= 0)
+                    {
+                        int temp = board[x, y-1].GetValue();
+                        board[x, y-1].SetValue(16);
+                        board[x, y].SetValue(temp);
+                    }
+                    break;
+                
+                case ConsoleKey.RightArrow:
+                    if (y-1 <= 4)
+                    {
+                        int temp = board[x, y+1].GetValue();
+                        board[x, y+1].SetValue(16);
+                        board[x, y].SetValue(temp);
+                        
+                    }
+                    break;
+                
+                default:
+                    continue;
+            }
+        }
     }
 
     public Boolean checkWinner()
