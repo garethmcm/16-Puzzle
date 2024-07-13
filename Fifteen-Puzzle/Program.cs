@@ -7,6 +7,7 @@
         while (!board.checkWinner())
         {
             board.makeMove();
+            board.displayBoard();
         }
     }
 }
