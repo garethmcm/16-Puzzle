@@ -5,11 +5,13 @@ public class Board
 {
     private Square[,] board;
     private Boolean winChecker;
+    private int numberOfMoves;
 
     public Board()
     {
         board = new Square[4, 4]; // Create a 4x4 board
         winChecker = false;
+        this.numberOfMoves = 0;
         generateBoard();
     }
     
@@ -51,7 +53,7 @@ public class Board
             }
             Console.WriteLine();
         }
-        Console.WriteLine();
+        Console.WriteLine("Number of moves: " + numberOfMoves);
     }
 
     public void makeMove()
@@ -74,24 +76,28 @@ public class Board
             int temp = board[x + 1, y].GetValue();
             board[x + 1, y].SetValue(16);
             board[x, y].SetValue(temp);
+            numberOfMoves++;
         }
         else if (keyInfo.Key == ConsoleKey.DownArrow && x - 1 >= 0)
         {
             int temp = board[x - 1, y].GetValue();
             board[x - 1, y].SetValue(16);
             board[x, y].SetValue(temp);
+            numberOfMoves++;
         }
         else if (keyInfo.Key == ConsoleKey.LeftArrow && y + 1 < 4)
         {
             int temp = board[x, y + 1].GetValue();
             board[x, y + 1].SetValue(16);
             board[x, y].SetValue(temp);
+            numberOfMoves++;
         }
         else if (keyInfo.Key == ConsoleKey.RightArrow &&  y - 1 >= 0)
         {
             int temp = board[x, y - 1].GetValue();
             board[x, y - 1].SetValue(16);
             board[x, y].SetValue(temp);
+            numberOfMoves++;
         }
         else
         {
