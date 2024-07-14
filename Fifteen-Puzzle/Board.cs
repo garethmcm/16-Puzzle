@@ -60,7 +60,7 @@ public class Board
     {
         int x = 0, y = 0;
 
-        while (board[x, y].GetValue() != 16)
+        while (board[x, y].value != 16)
         {
             y++;
             if (y >= 4)
@@ -73,35 +73,35 @@ public class Board
         ConsoleKeyInfo keyInfo = Console.ReadKey(true);
         if (keyInfo.Key == ConsoleKey.UpArrow && x + 1 < 4)
         {
-            int temp = board[x + 1, y].GetValue();
-            board[x + 1, y].SetValue(16);
-            board[x, y].SetValue(temp);
+            int temp = board[x + 1, y].value;
+            board[x + 1, y].value = 16;
+            board[x, y].value = temp;
             numberOfMoves++;
         }
         else if (keyInfo.Key == ConsoleKey.DownArrow && x - 1 >= 0)
         {
-            int temp = board[x - 1, y].GetValue();
-            board[x - 1, y].SetValue(16);
-            board[x, y].SetValue(temp);
+            int temp = board[x - 1, y].value;
+            board[x - 1, y].value = 16;
+            board[x, y].value = temp;
             numberOfMoves++;
         }
         else if (keyInfo.Key == ConsoleKey.LeftArrow && y + 1 < 4)
         {
-            int temp = board[x, y + 1].GetValue();
-            board[x, y + 1].SetValue(16);
-            board[x, y].SetValue(temp);
+            int temp = board[x, y + 1].value;
+            board[x, y + 1].value = 16;
+            board[x, y].value = temp;
             numberOfMoves++;
         }
         else if (keyInfo.Key == ConsoleKey.RightArrow &&  y - 1 >= 0)
         {
-            int temp = board[x, y - 1].GetValue();
-            board[x, y - 1].SetValue(16);
-            board[x, y].SetValue(temp);
+            int temp = board[x, y - 1].value;
+            board[x, y - 1].value = 16;
+            board[x, y].value = temp;
             numberOfMoves++;
         }
         else
         {
-            Console.WriteLine("Whoops! Try again");
+            Console.WriteLine("Whoops! You can't move that way");
         }
 
     }
@@ -114,8 +114,9 @@ public class Board
         {
             for (int col = 0; col < 4; col++)
             {
-                while(board[row, col].GetValue() == checker)
+                while(board[row, col].value == checker)
                 {
+                    board[row, col].lockedIn = true;
                     checker++;
                 }
             }
@@ -125,7 +126,7 @@ public class Board
             winCheck = true;
             Console.WriteLine("We have a winner!");
         }
-        Console.WriteLine("Game on.");
+        Console.WriteLine("Play on.");
         return winCheck;
     }
 }
