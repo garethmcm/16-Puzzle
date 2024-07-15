@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class Board
 {
     private Square[,] board;
@@ -9,15 +6,16 @@ public class Board
 
     public Board()
     {
-        board = new Square[4, 4]; // Create a 4x4 board
+        board = new Square[4, 4]; // board is made up of square objects
         winChecker = false;
-        this.numberOfMoves = 0;
-        generateBoard();
+        numberOfMoves = 0;
+        generateBoard(); // allocates random numbers to each square to give start point to game
     }
     
     public void generateBoard()
     {
         Random rand = new Random();
+        // list is used to check which numbers have been used already to avoid doubles on board
         List<int> randomList = new List<int>();
         for (int i = 1; i < 17; i++)
         {
@@ -31,7 +29,7 @@ public class Board
         }
 
         int listCount = 0;
-        
+        // keeps place on list
         for (int row = 0; row < 4; row++)
         {
             for (int col = 0; col < 4; col++)
@@ -49,15 +47,18 @@ public class Board
         {
             for (int col = 0; col < 4; col++)
             {
-                Console.Write(board[row, col].ToString().PadLeft(4));
+                Console.Write($" {board[row, col],-3} ");
             }
             Console.WriteLine();
         }
+        // shows how many moves user has made during game
         Console.WriteLine("Number of moves: " + numberOfMoves);
     }
 
     public void makeMove()
     {
+        Console.WriteLine("Play on.");
+        // coordinates of each square used to swap around on board with keystrokes below
         int x = 0, y = 0;
 
         while (board[x, y].value != 16)
@@ -101,6 +102,7 @@ public class Board
         }
         else
         {
+            // if user tries to go out of bounds, doesn't count towards moves
             Console.WriteLine("Whoops! You can't move that way");
         }
 
@@ -108,6 +110,7 @@ public class Board
 
     public Boolean checkWinner()
     {
+        // checks for a winner every game
         Boolean winCheck = false;
         int checker = 1;
         for (int row = 0; row < 4; row++)
@@ -116,7 +119,6 @@ public class Board
             {
                 while(board[row, col].value == checker)
                 {
-                    board[row, col].lockedIn = true;
                     checker++;
                 }
             }
@@ -126,7 +128,6 @@ public class Board
             winCheck = true;
             Console.WriteLine("We have a winner!");
         }
-        Console.WriteLine("Play on.");
         return winCheck;
     }
 }
